@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600);
+
+body { margin:0; padding:0; color:#333; font-family: 'Open Sans', sans-serif; font-size:16px; }
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.wrapper { margin:0 auto; max-width:1170px; position:relative; }
+
+.clear { clear: both; }
+
+.left { float:left; }
+
+.right { float:right; }
+
+ul{margin:0; padding:0;}
+
+li { list-style:none; }
+
+h1, h2, h3, h4, h5, h6 { margin:0; font-family: 'Open Sans', sans-serif; font-weight:600; }
+
+a{text-decoration: none; color: #044269 }
+
+/*************************************/
+
+.left_section {float: left;width: 48%;}
+
+.right_section{float: right;width: 48%;}
+
+.left_section h2 {border-bottom: 3px solid #53b2a1;color: #53b2a1;font-size: 24px;margin: 15px 0;padding: 0 0 10px;}
+
+.left_section form{ color:#333;font-size:14px;}
+
+.left_section form .fields_row {float: left;margin: 0 0 15px;width: 100%;}
+
+.left_section form .form_fields{ width: 48%;}
+
+.left_section form .form_fields input, .left_section form .form_fields select {border: 1px solid #ccc;border-radius: 3px;padding: 5px;width: 100%;}
+
+.left_section form .form_fields input[type=radio]{width: auto;}
+
+.form_fields.left.proType { width: 100%; }
+
+.coupon_container { display: none; }
+
+.coupon-background { margin: 100px 0 0; padding: 5px; }
+
+.coupon-border { padding: 20px; position: relative; text-align: center; width: 100%;}
+
+.coupon_container .discount-discount { float: left; font-size: 80px; font-weight: 600; line-height: 50px; width: 50%; padding: 0 0 0; }
+
+.coupon_container .discount-discount .discount-value {  font-size: 120px;
+    font-weight: 600;
+    line-height: 60px;
+    padding: 28px 0 0;
+    text-align: right;
+    width: 55%;}
+
+.coupon_container .discount-discount span {  display: inline-block;
+    float: left;
+    font-size: 47px;
+    line-height: 30px;
+    padding: 11px 0;
+    text-align: left;
+    vertical-align: top; }
+
+.coupon_container .discount-discount .discount-percent { float: left;
+    font-size: 56px;
+    font-weight: 600;
+    padding: 28px 0 0;
+    text-align: center;
+    width: 34%;}
+
+.coupon_container .discount-details { float: left;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 28px;
+    padding: 9px 0 20px;
+    text-align: left;
+    width: 50%;}
+.discount-color {
+    float: left;
+    width: 100%;
+	margin: 0 0 18px;
+}
+.coupon_container .title {font-size: 20px;font-weight: 600;line-height: 20px;}
+
+.coupon_container .discount-code { font-size: 34px;
+    font-weight: 600;
+    line-height: 34px;}
+.coupon_container .discount-btn{font-size: 63px !important;}
+.free-clock {
+    font-size: 38px;   
+}
+.free-sale {
+    font-size: 117px;
+    line-height: 84px;
+	font-weight: bold;
+}
+.free-tick {
+    font-size: 20px;
+    line-height: 38px;
+}
+.free-color {
+    font-size: 64px;
+    line-height: 52px;
+	font-weight: bold;
+}
+.free-title {
+    font-size: 22px;
+}
+.coupon_container .free-btn{font-size:38px !important;}
+.coupon-footer { font-size: 9px; text-decoration: underline; }
+.flash-title {
+    font-size: 32px;
+}
+.flash-free {
+      font-size: 184px;
+    line-height: 124px;
+}
+.flash-tick {
+      font-size: 86px;
+    line-height: 99px;
+}
+.flash-for {
+    font-size: 31px;
+    line-height: 18px;
+}
+.flash-code {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 37px;
+}
+.coupon_container .flash-btn{font-size:34px !important;}
+
+.shop-btn { border-radius: 5px; clear: both; display: table; font-size: 22px; font-weight: 600; margin: 0 auto; padding: 6px 30px; }
+
+.uppercase { text-transform: uppercase; }
+
+.timer{font-size: 28px; padding: 3px 10px; height: 52px; line-height: 42px; }
+
+.timer-container { display: table; margin: 0 auto 15px; position: relative; width: 70%; height: 52px; }
+
+.bk {background: #53b2a1 none repeat scroll 0 0;position: absolute;top: 0;width: 0px; height:52px;}
+
+.bk.left {left: 0;}
+
+.bk.right {right: 0;}
+
+.arrow {height: 26px !important;position: absolute;width: 0;z-index: 2;}
+
+.arrow.top {border-bottom: 26px solid transparent; border-right: 30px solid transparent;border-top: 0 solid transparent;top: 0;}
+
+.arrow.bottom {border-bottom: 0 solid transparent;border-right: 30px solid transparent;border-top: 26px solid transparent;top: 26px;}
+
+.bk.left > div {left: -30px;}
+
+.bk.right > div {right: -30px;}
+
+.right .top {border-color: transparent -moz-use-text-color transparent transparent;border-style: solid none solid solid;border-width: 0 medium 26px 30px;}
+
+.right .bottom { border-color: transparent -moz-use-text-color transparent transparent;border-style: solid none solid solid;border-width: 26px medium 0 30px; }
+
+.time-color { height: 100%; position: absolute; width: 100%; }
+
+/********************************************************************/
+.tab_container ul {background: #eee none repeat scroll 0 0;border: 1px solid #ddd;padding: 0 10px;}
+
+.tab_container ul li {display: inline-block;margin: 20px 0 0;}
+
+.tab_container ul li a {display: block;padding: 15px 22px;}
+
+.tab_container ul li.active a, .tab_container ul li a:hover {background: #fff none repeat scroll 0 0;border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-top: 1px solid #ddd;padding-bottom: 16px;padding-top: 13px;position: relative;top: 1px;}
+
+/*******************************************************************/
+
+.app_form{}
+
+.app_form form{}
+
+.app_form form .form_fields {float: left;margin: 0 3% 15px 0;width: 27%;}
+
+.app_form form .form_fields.last{margin-right: 0;width: 10%;}
+
+.app_form form .form_fields label {color: #000;display: block;font-size: 16px;font-weight: 600;margin: 0 0 3px;}
+
+.app_form form .form_fields input, .app_form form .form_fields select {background: #eee none repeat scroll 0 0;border: 1px solid #ccc;border-radius: 3px;font-size: 14px;padding: 6px 10px;width: 100%;}
+
+.app_form form .form_fields input[type="submit"] {background: #333 none repeat scroll 0 0;border: 1px solid #333;color: #fff;cursor: pointer;font-family: "Open Sans",sans-serif;font-size: 14px;font-weight: 600;margin: 22px 0 0;}
+
+.app_form.question_form form .form_fields{width: 35%;}
+
+.app_form.question_form form .form_fields.last {width: 10%; clear: both;}
+
+.app_form.question_form form .form_fields.last input[type="submit"] {margin: 0;}
+
+.app_form.question_form form .form_fields.question {
+  display: block;
+  float: none;
+  margin-right: 0;
+  width: 73%;
+}
+
+.app_form.question_form form .form_fields.answer{width: 60%;}
+
+.app_form.question_form form .form_fields.answer input{  width: 79%; margin: 0 0 10px;}
+
+.app_form.question_form form .form_fields.answer input.answer_button{background: #333 none repeat scroll 0 0;border: 0;color: #fff;cursor: pointer;font-family: "Open Sans",sans-serif;font-size: 14px;font-weight: 600;width: 20%; margin: 0 0 10px; float: right;}
+
+.app_form.question_form form .form_fields .question input{}
+
+.app_table {clear: both;padding: 30px 0 0;}
+
+.app_table table {width: 100%;}
+
+.app_table table tr{ }
+
+.app_table table tr:nth-child(2n){ background: #f1f1f1 none repeat scroll 0 0;}
+
+.app_table table tr th, .app_table table tr td {border-collapse: collapse;padding: 10px 15px;text-align: left;}
+
+.app_table table tr th {border-bottom: 1px solid #ccc;font-weight: 600;}
+
+
+
