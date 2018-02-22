@@ -163,8 +163,16 @@ function ordercreate(){
 	}
 	 $template = $getshop_details->id_template ;
 	
-		 
-		 $uname = $Order['shipping_address']['first_name'].' '.$Order['shipping_address']['last_name'];  
+		 		
+		if ($Order['shipping_address']['company']!="")
+		{
+			$uname = $Order['shipping_address']['company'];  	
+		}
+		{
+			$uname = $Order['shipping_address']['first_name'].' '.$Order['shipping_address']['last_name'];  
+		}
+		
+		
 		$email = $Order['email'];
 		$orderno = $Order['id'];
 		$address = $Order['shipping_address']['address1'];
@@ -178,10 +186,21 @@ function ordercreate(){
 		$subtotal_price = $Order['subtotal_price'];
 		$total_tax = $Order['total_tax'];
 		$total_price = $Order['total_price'];
+
+		$cf=$Order['shipping_address']['address2'];
+		$piva=$Order['shipping_address']['address2'];
+		
+		if (is_numeric($piva))
+		{
+			$cf="";
+		}
+		else
+		{
+			$piva="";
+		}
 		
  
-		 $api_key= $getshop_details->api_key; 
-		// $api_key= "f7c25oKlBr31PNNa88bJKgxabEDqEvJl";
+		$api_key= $getshop_details->api_key; 
 		
 	$fattura24_api_url = "https://www.app.fattura24.com/api/v0.3/TestKey" ; 
 	$send_data = array();
@@ -199,8 +218,8 @@ function ordercreate(){
 		$customerData = array(
 			'Name'      => $uname,
 			'Email'     => $email,
-			'FiscalCode'      => 'Fisalcode',
-			'VatCode'      => 'VatCode',
+			'FiscalCode'      => $cf,
+			'VatCode'      => $piva,
 			'Address'      => $address,
 			'Postcode'      => $zip,
 			'City'      => $city,
