@@ -141,6 +141,12 @@ function ordercreate(){
 	 $this->load->model('Settings_model');	 
 	header('Content-type: application/json');
 	$Order = json_decode(file_get_contents('php://input'),true);
+	 /*dump json*/
+ $json_dump = print_r($Order, TRUE);
+ $fp = fopen('json.log', 'a');
+ fwrite($fp, $json_dump);
+ fclose($fp); 
+ /*dump json*/
 	$orderid = $Order['order_number'];
 	$vendor = $Order['line_items']['0']['vendor'];	
 	if(isset($Order)){
@@ -199,8 +205,26 @@ function ordercreate(){
 			$piva="";
 		}
 		
+		
+		if ($p_iva!="" AND $cf=="")
+		{
+			$tipo_doc="I";
+		}
+		if ($p_iva=="" AND $cf!="")
+		{
+			$tipo_doc="R";
+		}
+		if ($p_iva!="" AND $cf!="")
+		{
+			$tipo_doc="I";
+		}		
+		if ($p_iva=="" AND $cf=="")
+		{
+			$tipo_doc="R";
+		}		
  
 		$api_key= $getshop_details->api_key; 
+		
 		
 	$fattura24_api_url = "https://www.app.fattura24.com/api/v0.3/TestKey" ; 
 	$send_data = array();
@@ -272,7 +296,7 @@ function ordercreate(){
 
 	$xml->startElement('Document');
 
-	$xml->writeElement('DocumentType','I-force');
+	$xml->writeElement('DocumentType',$tipo_doc);
 	$xml->writeElement('SendEmail', $SendEmail);	// the value from the shopify app
 	$xml->writeElement('IdTemplate', $template);		// the value from the shopify app
 	$xml->writeElement('Object', $orderno);
