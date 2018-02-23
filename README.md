@@ -1,5 +1,13 @@
 ## Web app per applicazione privata shopify-fattura24
 
+Collegare shopify a fattura24 per generare Ricevute o Fatture in base ai campi inseriti in fase di checkout dall'utente.
+
+Se è presente il codice fiscale e la partita iva esce una fattura
+Se è presente solo la partita iva si genera una fattura
+Se è presente solo il codice fiscale si genera una ricevuta
+Se non è presente nè il codice fiscale nè la partita iva si genera una ricevuta
+
+
 Registrarsi a shopify partners
 
 Fare il login e cliccare su Apps
