@@ -12,7 +12,9 @@ Collegare shopify a fattura24 per generare Ricevute o Fatture in base ai campi i
 - Mysql
 
 Scaricare l'applicazione e scompattare l'archivio nel vostro hosting / spazio web
+
 Creare un nuovo utente e collegare un database garantendogli tutti i permessi
+
 Importare il file shopify.sql nel database appena creato
 
 Registrarsi a shopify partners
